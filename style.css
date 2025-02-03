@@ -1,0 +1,198 @@
+/* Réinitialisation de base */
+*body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Permet au footer de rester en bas */
+}
+main {
+    flex: 1; /* Fait en sorte que le contenu prenne tout l’espace disponible */
+    width: 100%;
+    max-width: 1200px; /* Limite la largeur pour éviter le débordement */
+    margin: 0 auto; /* Centre le contenu */
+}
+/* Style du header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #003366;
+    color: white;
+    padding: 15px 20px;
+    width: 100%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+* --- Correction du menu --- */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centre le menu */
+    width: 100%;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* Section Hero */
+.hero {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(to right, #003366, #0073e6);
+    color: white;
+}
+
+..hero {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(to right, #003366, #0073e6);
+    color: white;
+    width: 100%;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #ff6600;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Section des Aperçus */
+..sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.box {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.box h2 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #003366;
+    color: white;
+    margin-top: 20px;
+}
+/* --- Réinitialisation de base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Empêche le débordement horizontal --- */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Conteneur principal centré --- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+/* --- Navigation fixe et bien alignée --- */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #003366;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: center;
+    width: 100%;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+/* --- Section principale bien centrée --- */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* --- Sections ajustées pour éviter le débordement --- */
+section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* --- Fixe le pied de page en bas --- */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #003366;
+    color: white;
+    width: 100%;
+    margin-top: auto;
+}
+/* Animation de fondu */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Lorsque l'élément est visible */
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
