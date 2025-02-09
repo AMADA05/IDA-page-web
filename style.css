@@ -8,6 +8,12 @@
     flex-direction: column;
     min-height: 100vh; /* Permet au footer de rester en bas */
 }
+header img {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
 main {
     flex: 1; /* Fait en sorte que le contenu prenne tout l’espace disponible */
     width: 100%;
@@ -170,7 +176,7 @@ main {
 section {
     width: 100%;
     max-width: 1200px;
-    padding: 20px;
+    padding: flex;
     text-align: center;
     overflow: hidden;
 }
@@ -195,4 +201,256 @@ footer {
 .fade-in.show {
     opacity: 1;
     transform: translateY(0);
+}
+/* Champ de recherche */
+    input {
+      width: 80%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: 10px auto;
+      display: block;
+    }
+
+    /* Boutons */
+    button {
+      padding: 10px 15px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+      img {
+      height: 120px;
+      width: 100px;
+      border-radius: 5%;
+      margin-right: 10px;
+    }
+    /* Animation d'apparition */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Bouton Retour en Haut */
+.btn-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Caché par défaut */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.btn-top:hover {
+    background-color: #005bb5;
+}
+/* Bouton Mode Sombre */
+.theme-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.theme-btn:hover {
+    background-color: #e6b800;
+}
+
+/* Mode sombre */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode header {
+    background-color: #1e1e1e;
+}
+
+.dark-mode nav ul li a {
+    color: white;
+}
+
+.dark-mode .btn {
+    background-color: #ff6600;
+}
+
+.dark-mode footer {
+    background-color: #1e1e1e;
+}
+/* Formulaire */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #005bb5;
+}
+
+/* Message d'erreur */
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: none;
+}
+/* Conteneur des notifications */
+#notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Style des notifications */
+.notification {
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Couleurs des notifications */
+.success { background-color: #4CAF50; } /* Vert */
+.error { background-color: #E74C3C; } /* Rouge */
+.info { background-color: #3498DB; } /* Bleu */
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animation de disparition */
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-10px); }
+}
+/* Animation au chargement */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.software-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.software {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 320px;
+}
+
+.software a {
+    display: block;
+    margin-top: 10px;
+    padding: 8px;
+    background: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.video {
+    margin-top: 15px;
+}
+
+.video h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.video iframe {
+    width: 100%;
+    height: 180px;
+    border-radius: 5px;
+}
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    background: black;
+}
+
+.video-container video {
+    width: 80%; /* Ajuste la taille de la vidéo */
+    max-width: 900px; /* Taille maximale pour éviter qu'elle soit trop grande */
+    border-radius: 10px; /* Coins arrondis pour un meilleur design */
 }
