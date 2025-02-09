@@ -8,43 +8,109 @@
 </head>
 <body>
     <header>
-        <h1>Cours d'Informatique</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
+                <li><a href="cours.html">Cours</a></li>
                 <li><a href="tutoriels.html">Tutoriels</a></li>
                 <li><a href="logiciels.html">Logiciels</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <h2>Bienvenue dans la section des cours</h2>
-        <p>Retrouvez ici des cours sur l'informatique et le développement d'applications.</p>
+    <section class="search-bar">
+        <input type="text" id="search" placeholder="Rechercher un cours..." onkeyup="searchCourses()">
+    </section>
 
-        <section class="cours-container">
-            <article class="cours">
-                <h3>🔹 Introduction à l’informatique</h3>
-                <p>Découvrez les bases de l’informatique, y compris les systèmes d’exploitation et le matériel.</p>
-                <a href="#">Lire plus</a>
-            </article>
+    <h2>Liste des Cours</h2>
 
-            <article class="cours">
-                <h3>🔹 Développement Web (HTML, CSS, JS)</h3>
-                <p>Apprenez les fondamentaux du développement web avec HTML, CSS et JavaScript.</p>
-                <a href="#">Lire plus</a>
-            </article>
+    <div class="courses" id="coursesContainer">
+        <div class="course-card" data-name="HTML">
+            <img src="images/html.png" alt="HTML">
+            <h3>Apprendre HTML</h3>
+            <p>Introduction au HTML pour débutants.</p>
+            <button onclick="loadFile('cours/html.pdf', 'HTML')">Ouvrir</button>
+            <a href="cours/html.pdf" download><button>Télécharger</button></a>
+            <label>
+                <input type="checkbox" onclick="markCompleted('HTML')"> Terminé
+            </label>
+        </div>
 
-            <article class="cours">
-                <h3>🔹 Bases de données et SQL</h3>
-                <p>Maîtrisez la gestion des bases de données avec MySQL et le langage SQL.</p>
-                <a href="#">Lire plus</a>
-            </article>
-        </section>
-    </main>
+        <div class="course-card" data-name="CSS">
+            <img src="images/css.png" alt="CSS">
+            <h3>Maîtriser le CSS</h3>
+            <p>Découvre les styles et animations CSS.</p>
+            <button onclick="loadFile('cours/css.pdf', 'CSS')">Ouvrir</button>
+            <a href="cours/css.pdf" download><button>Télécharger</button></a>
+            <label>
+                <input type="checkbox" onclick="markCompleted('CSS')"> Terminé
+            </label>
+        </div>
+
+        <div class="course-card" data-name="JavaScript">
+            <img src="images/js.png" alt="JavaScript">
+            <h3>JavaScript Facile</h3>
+            <p>Les bases du langage JavaScript.</p>
+            <button onclick="loadFile('cours/javascript.mp4', 'JavaScript')">Ouvrir</button>
+            <a href="cours/javascript.mp4" download><button>Télécharger</button></a>
+            <label>
+                <input type="checkbox" onclick="markCompleted('JavaScript')"> Terminé
+            </label>
+        </div>
+    </div>
+
+    <h2>Lecteur de Fichiers</h2>
+    <div class="file-viewer">
+        <iframe id="fileViewer" src="" width="100%" height="500px"></iframe>
+        <p id="fileInfo">Sélectionne un cours pour l'afficher ici.</p>
+    </div>
 
     <footer>
-        <p>&copy; 2025 IDA - Tous droits réservés</p>
+        <p>&copy; 2025 IDA - Informatique et Développement d'Applications</p>
     </footer>
+
+    <script>
+        // Chargement des fichiers
+        function loadFile(filePath, title) {
+            document.getElementById("fileViewer").src = filePath;
+            document.getElementById("fileInfo").textContent = "Affichage du cours : " + title;
+        }
+
+        // Barre de recherche
+        function searchCourses() {
+            let input = document.getElementById("search").value.toLowerCase();
+            let courses = document.querySelectorAll(".course-card");
+
+            courses.forEach(course => {
+                let courseName = course.getAttribute("data-name").toLowerCase();
+                if (courseName.includes(input)) {
+                    course.style.display = "block";
+                } else {
+                    course.style.display = "none";
+                }
+            });
+        }
+
+        // Marquer un cours comme terminé
+        function markCompleted(courseName) {
+            let completedCourses = JSON.parse(localStorage.getItem("completedCourses")) || {};
+            completedCourses[courseName] = !completedCourses[courseName];
+            localStorage.setItem("completedCourses", JSON.stringify(completedCourses));
+            updateCompletionStatus();
+        }
+
+        // Mise à jour des cases cochées
+        function updateCompletionStatus() {
+            let completedCourses = JSON.parse(localStorage.getItem("completedCourses")) || {};
+            document.querySelectorAll(".course-card").forEach(course => {
+                let courseName = course.getAttribute("data-name");
+                let checkbox = course.querySelector("input[type='checkbox']");
+                checkbox.checked = completedCourses[courseName] || false;
+            });
+        }
+
+        // Vérifier les cours terminés au chargement
+        document.addEventListener("DOMContentLoaded", updateCompletionStatus);
+    </script>
 </body>
 </html>
