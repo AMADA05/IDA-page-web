@@ -10,27 +10,41 @@
 
     <!-- En-tête -->
     <header>
-        <div class="logo">IDA</div>
-        <nav>
+          <div class="header">
+      <img src="./logo.jpg">
+        
+        <h3>
+            <nav>
             <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Publications</a></li>
-                <li><a href="#">Vidéos</a></li>
+                <li><a href="cours.html">Cours</a></li>
+                <li><a href="tutoriels.html">Tutoriels</a></li>
+                <li><a href="logiciels.html">Logiciels</a></li>
+                
             </ul>
-            <ul>
-                <li><a href="#">Cours</a></li>
-                <li><a href="#">Tutoriels</a></li>
-                <li><a href="#">Logiciels</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+                
+            
         </nav>
+        </h3>
+        <!-- Bouton Retour en Haut -->
+<button id="btnTop" class="btn-top">↑</button>
+<!-- Bouton Mode Sombre -->
+<button id="toggleTheme" class="theme-btn">🌙</button>
+<!-- Conteneur des notifications -->
+<div id="notification-container"></div>
     </header>
+    <section class="video-container">
+    <video autoplay muted loop>
+        <source src="./demo1.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la lecture de vidéos.
+    </video>
+</section>
 
     <!-- Section principale -->
-    <section class="fade-in">
+    <section class="hidden">
     <h2>Bienvenue sur mon site</h2>
-    <p>Découvrez du contenu interactif avec des animations dynamiques.</p>
+    <p>Découvrez du contenu incroyable ici !</p>
 </section>
+
     <section class="hero">
         <h1>Bienvenue sur IDA Hub</h1>
         <p>Découvrez les dernières publications, tutoriels et ressources pour le développement informatique.</p>
@@ -42,28 +56,76 @@
     <p>Retrouvez nos meilleures ressources pour apprendre.</p>
 </section>
 
+
     <!-- Aperçu des sections principales -->
     <section class="fade-in">
-        <div class="box">
+        <div class="hero">
             <h2>📢 Dernières Publications</h2>
             <p>Intégration des publications Facebook ici.</p>
+            <a href="#">aller sur la page</a>
         </div>
-        <div class="box">
+        <section class="hidden">
+    <h2>Nos services</h2>
+    <p>Nous proposons une large gamme de services pour vous aider.</p>
+</section>
+        <section>
+            <div class="box">
             <h2>🎥 Vidéos Tutoriels</h2>
             <p>Regardez les derniers tutoriels.</p>
+            <a href="tutoriels.html">regarder des tuto</a>
         </div>
-        <div class="box">
+        <section>
+       <video src="./video2.mp4" height="100" autoplay  muted loop></video>
+        <video src="./video1.mp4" height="100" autoplay  muted loop></video>
+    </section>
+        </section>
+        <section>
+            <div class="box">
             <h2>📚 Cours et Tutoriels</h2>
             <p>Apprenez avec nos guides détaillés.</p>
+            <a href="cours.html">débuté mes cours en ligne</a>
         </div>
-        <div class="box">
+        </section>
+        <section>
+            <div class="box">
             <h2>💻 Logiciels Recommandés</h2>
             <p>Téléchargez des outils utiles.</p>
+            <a href="logiciels.html">installer mes logiciels</a>
         </div>
+        </section>
+    </section>
+    <section class="fade-in">
+        <div class="box">
+            <img src="./img1.jpg">
+            <img src="./img2.jpg">
+            <img src="./img5.jpg">
+            <img src="./img4.jpg">
+        </div>
+
+    </section>
+    <section class="box">
+    <form id="contactForm">
+    <h2>Contactez-nous</h2>
+    
+    <label for="name">Nom :</label>
+    <input type="text" id="name" name="name" required>
+    <small class="error-message" id="nameError"></small>
+
+    <label for="email">E-mail :</label>
+    <input type="email" id="email" name="email" required>
+    <small class="error-message" id="emailError"></small>
+
+    <label for="message">Message :</label>
+    <textarea id="message" name="message" required></textarea>
+    <small class="error-message" id="messageError"></small>
+
+    <button type="submit">Envoyer</button>
+</form>
     </section>
 
     <!-- Pied de page -->
     <footer>
+        <nav>de Grarou Kleguohe Israël_AMADA_05</nav>
         <p>&copy; 2025 IDA Hub | Tous droits réservés</p>        
     </footer>
 <script src="script.js"></script>
