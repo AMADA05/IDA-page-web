@@ -6,9 +6,7 @@
     <title>Cours - IDA</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <style>
-    
 .courses {
     display: flex;
     flex-wrap: wrap;
@@ -41,7 +39,6 @@
     text-align: center;
     margin-top: 20px;
 }
-    
 </style>
 <body>
     <header>
@@ -63,7 +60,7 @@
 
     <div class="courses" id="coursesContainer">
         <div class="course-card" data-name="HTML">
-            <img src="./html.png" alt="HTML">
+            <img src="images/html.png" alt="HTML">
             <h3>Apprendre HTML</h3>
             <p>Introduction au HTML pour débutants.</p>
             <button onclick="loadFile('./html.pdf', 'HTML')">Ouvrir</button>
@@ -77,7 +74,7 @@
             <img src="./css.png" alt="CSS">
             <h3>Maîtriser le CSS</h3>
             <p>Découvre les styles et animations CSS.</p>
-            <button onclick="loadFile('cours/css.pdf', 'CSS')">Ouvrir</button>
+            <button onclick="loadFile('./css.pdf', 'CSS')">Ouvrir</button>
             <a href="./css.pdf" download><button>Télécharger</button></a>
             <label>
                 <input type="checkbox" onclick="markCompleted('CSS')"> Terminé
@@ -88,10 +85,31 @@
             <img src="./js.png" alt="JavaScript">
             <h3>JavaScript Facile</h3>
             <p>Les bases du langage JavaScript.</p>
-            <button onclick="loadFile('./js.mp4', 'JavaScript')">Ouvrir</button>
-            <a href="./.mp4" download><button>Télécharger</button></a>
+            <button onclick="loadFile('./javascript.pdf', 'JavaScript')">Ouvrir</button>
+            <a href="pdf/javascript.pdf" download><button>Télécharger</button></a>
             <label>
                 <input type="checkbox" onclick="markCompleted('JavaScript')"> Terminé
+            </label>
+        </div>
+
+        <div class="course-card" data-name="PHP">
+            <img src="./php.png" alt="PHP">
+            <h3>Développer en PHP</h3>
+            <p>Apprends à créer des applications dynamiques avec PHP.</p>
+            <button onclick="loadFile('pdf/php.pdf', 'PHP')">Ouvrir</button>
+            <a href="./php.pdf" download><button>Télécharger</button></a>
+            <label>
+                <input type="checkbox" onclick="markCompleted('PHP')"> Terminé
+            </label>
+        </div>
+        <div class="course-card" data-name="mysql">
+            <img src="./mysql.png" alt="mysql">
+            <h3>apprenez tout sur les DB mySQL</h3>
+            <p>Crée et géré vos base de donne avec mySQL.</p>
+            <button onclick="loadFile('./mysql.pdf', 'mysql')">Ouvrir</button>
+            <a href="./mysql.pdf" download><button>Télécharger</button></a>
+            <label>
+                <input type="checkbox" onclick="markCompleted('mysql')"> Terminé
             </label>
         </div>
     </div>
@@ -107,7 +125,7 @@
     </footer>
 
     <script>
-        // Chargement des fichiers
+        // Chargement des fichiers PDF
         function loadFile(filePath, title) {
             document.getElementById("fileViewer").src = filePath;
             document.getElementById("fileInfo").textContent = "Affichage du cours : " + title;
