@@ -6,6 +6,64 @@
     <title>Tutoriels - IDA</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    .search-bar {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .search-bar input {
+        width: 70%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .categories {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 20px 0;
+    }
+
+    .category-btn {
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
+        font-size: 16px;
+    }
+
+    .category-btn:hover {
+        background-color: #0056b3;
+    }
+
+    .video-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .video {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        width: 320px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    iframe {
+        width: 100%;
+        height: 180px;
+    }
+
+</style>
 <body>
     <header>
         <h1>📺 Tutoriels Vidéo</h1>
@@ -22,20 +80,64 @@
         <h2>Regardez nos tutoriels en vidéo</h2>
         <p>Des vidéos explicatives pour mieux comprendre la programmation et l'informatique.</p>
 
+        <!-- Barre de recherche YouTube -->
+        <div class="search-bar">
+            <input type="text" id="youtubeSearch" placeholder="Rechercher un tutoriel sur YouTube...">
+            <button class="category-btn" onclick="searchYouTube()">🔍 Rechercher</button>
+        </div>
+
+        <!-- Catégories de tutoriels -->
+        <div class="categories">
+            <button class="category-btn" onclick="showCategory('html-css')">HTML & CSS</button>
+            <button class="category-btn" onclick="showCategory('javascript')">JavaScript</button>
+            <button class="category-btn" onclick="showCategory('python')">Python</button>
+            <button class="category-btn" onclick="showCategory('php-mysql')">PHP & MySQL</button>
+        </div>
+
+        <!-- Tutoriels Vidéo -->
         <section class="video-container">
-            <article class="video">
+            <!-- HTML & CSS -->
+            <article class="video" data-category="html-css">
                 <h3>🔹 Apprendre HTML & CSS</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/XXXXXXXXXXX" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/mU6anWqZJcc" frameborder="0" allowfullscreen></iframe>
             </article>
 
-            <article class="video">
+            <article class="video" data-category="html-css">
+                <h3>🔹 CSS Flexbox et Grid</h3>
+                <iframe src="https://www.youtube.com/embed/1Rs2ND1ryYc" frameborder="0" allowfullscreen></iframe>
+            </article>
+
+            <!-- JavaScript -->
+            <article class="video" data-category="javascript">
                 <h3>🔹 Introduction à JavaScript</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/XXXXXXXXXXX" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/hdI2bqOjy3c" frameborder="0" allowfullscreen></iframe>
             </article>
 
-            <article class="video">
-                <h3>🔹 Programmation en Python</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/XXXXXXXXXXX" frameborder="0" allowfullscreen></iframe>
+            <article class="video" data-category="javascript">
+                <h3>🔹 JavaScript Avancé</h3>
+                <iframe src="https://www.youtube.com/embed/Oe421EPjeBE" frameborder="0" allowfullscreen></iframe>
+            </article>
+
+            <!-- Python -->
+            <article class="video" data-category="python">
+                <h3>🔹 Débuter en Python</h3>
+                <iframe src="https://www.youtube.com/embed/rfscVS0vtbw" frameborder="0" allowfullscreen></iframe>
+            </article>
+
+            <article class="video" data-category="python">
+                <h3>🔹 Python et Intelligence Artificielle</h3>
+                <iframe src="https://www.youtube.com/embed/Z1RJmh_OqeA" frameborder="0" allowfullscreen></iframe>
+            </article>
+
+            <!-- PHP & MySQL -->
+            <article class="video" data-category="php-mysql">
+                <h3>🔹 PHP pour Débutants</h3>
+                <iframe src="https://www.youtube.com/embed/OK_JCtrrv-c" frameborder="0" allowfullscreen></iframe>
+            </article>
+
+            <article class="video" data-category="php-mysql">
+                <h3>🔹 Connexion PHP & MySQL</h3>
+                <iframe src="https://www.youtube.com/embed/FLmE2EJWnXw" frameborder="0" allowfullscreen></iframe>
             </article>
         </section>
     </main>
@@ -43,5 +145,28 @@
     <footer>
         <p>&copy; 2025 IDA - Tous droits réservés</p>
     </footer>
+
+    <script>
+        function searchYouTube() {
+            let query = document.getElementById("youtubeSearch").value;
+            if (query) {
+                let url = "https://www.youtube.com/results?search_query=" + encodeURIComponent(query);
+                window.open(url, "_blank");
+            }
+        }
+
+        function showCategory(category) {
+            let videos = document.querySelectorAll(".video");
+            videos.forEach(video => {
+                if (video.getAttribute("data-category") === category || category === "all") {
+                    video.style.display = "block";
+                } else {
+                    video.style.display = "none";
+                }
+            });
+        }
+
+        showCategory("all");
+    </script>
 </body>
 </html>
