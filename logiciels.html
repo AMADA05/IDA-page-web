@@ -5,6 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logiciels - IDA</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .categories {
+            background: white;
+            padding: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 10px;
+        }
+        .categories a {
+            margin: 10px;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .software-category {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .software {
+            margin-bottom: 20px;
+        }
+        .video iframe {
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+        }
+        .youtube-search {
+            background: white;
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 10px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,48 +88,117 @@
         </nav>
     </header>
 
-    <main>
-        <h2>Liste des logiciels recommandés</h2>
-        <p>Des outils indispensables pour le développement et l’apprentissage de l’informatique.</p>
+    <!-- Menu de catégories -->
+    <section class="categories">
+        <h2>📌 Accès rapide aux catégories</h2>
+        <nav>
+            <a href="#dev">Développement</a>
+        <a href="#design">Design & Multimédia</a>            
+        <a href="#bureautique">Bureautique & Productivité</a>
+        
+        </nav>                
+    </section>
 
-        <section class="software-container">
-            <!-- Logiciel 1 : Visual Studio Code -->
-            <article class="software">
-                <h3>🔹 Visual Studio Code</h3>
-                <p>Un éditeur de code puissant et gratuit pour le développement.</p>
-                <a href="https://code.visualstudio.com/" target="_blank">Télécharger</a>
-                <div class="video">
-                    <h4>Présentation de Visual Studio Code</h4>
-                    <iframe <video src="./vscode.mp4" height="100" autoplay  muted loop></video></iframe> 
-                </div>
-            </article>
+    <!-- Barre de recherche YouTube -->
+    <section class="youtube-search">
+        <h3>🔍 Rechercher un tutoriel sur YouTube</h3>
+        <input type="text" id="youtubeQuery" placeholder="Entrez le nom du logiciel...">
+        <button onclick="searchYouTube()">Rechercher</button>
+    </section>
 
-            <!-- Logiciel 2 : XAMPP -->
-            <article class="software">
-                <h3>🔹 XAMPP</h3>
-                <p>Un serveur local pour tester vos applications web en PHP/MySQL.</p>
-                <a href="https://www.apachefriends.org/fr/index.html" target="_blank">Télécharger</a>
-                <div class="video">
-                    <h4>Présentation de xamp</h4>
-<iframe <video src="./xamp.mp4" height="100" autoplay  muted loop></video></iframe>
-                </div>
-            </article>
+    <!-- Catégorie : Développement -->
+    <section class="software-category" id="dev">
+        <h2>🛠️ Développement</h2>
 
-            <!-- Logiciel 3 : GitHub Desktop -->
-            <article class="software">
-                <h3>🔹 GitHub Desktop</h3>
-                <p>Un outil pour gérer vos projets avec GitHub.</p>
-                <a href="https://desktop.github.com/" target="_blank">Télécharger</a>
-                <div class="video">
-                    <h4>Présentation de GitHub Desktop</h4>
-                    <<iframe <video src="./githube.mp4" height="100" autoplay  muted loop></video></iframe>
-                </div>
-            </article>
-        </section>
-    </main>
+        <article class="software">
+            <h3>🔹 Visual Studio Code</h3>
+            <p>Éditeur de code moderne et performant.</p>
+            <a href="https://code.visualstudio.com/" target="_blank">Télécharger</a>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/WPqXP_kLzpo" allowfullscreen></iframe>
+            </div>
+        </article>
+
+        <article class="software">
+            <h3>🔹 XAMPP</h3>
+            <p>Serveur local pour PHP et MySQL.</p>
+            <a href="https://www.apachefriends.org/fr/index.html" target="_blank">Télécharger</a>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/Ob3EnR5DBJ4" allowfullscreen></iframe>
+            </div>
+        </article>
+
+        <article class="software">
+            <h3>🔹 GitHub Desktop</h3>
+            <p>Gestion des projets GitHub en local.</p>
+            <a href="https://desktop.github.com/" target="_blank">Télécharger</a>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/R8OAwrcmlaw" allowfullscreen></iframe>
+            </div>
+        </article>
+    </section>
+
+    <!-- Catégorie : Design & Multimédia -->
+    <section class="software-category" id="design">
+        <h2>🎨 Design & Multimédia</h2>
+
+        <article class="software">
+            <h3>🔹 Adobe Photoshop</h3>
+            <p>Éditeur d’images puissant.</p>
+            <a href="https://www.adobe.com/fr/products/photoshop.html" target="_blank">Télécharger</a>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/WNp8n_Roi0s" allowfullscreen></iframe>
+            </div>
+        </article>
+
+        <article class="software">
+            <h3>🔹 GIMP</h3>
+            <p>Alternative gratuite à Photoshop.</p>
+            <a href="https://www.gimp.org/downloads/" target="_blank">Télécharger</a>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/Acw3DFsp7Do" allowfullscreen></iframe>
+            </div>
+        </article>
+    </section>
+
+    <!-- Catégorie : Bureautique & Productivité -->
+    <section class="software-category" id="bureautique">
+        <h2>📂 Bureautique & Productivité</h2>
+
+        <article class="software">
+            <h3>🔹 Microsoft Office</h3>
+            <p>Suite bureautique (Word, Excel, PowerPoint).</p>
+            <a href="https://www.microsoft.com/fr-fr/microsoft-365/get-started-with-office-2021" target="_blank">Télécharger</a>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/BJSkcs4zJoI" allowfullscreen></iframe>
+            </div>
+        </article>
+
+        <article class="software">
+            <h3>🔹 LibreOffice</h3>
+            <p>Suite bureautique gratuite.</p>
+            <a href="https://www.libreoffice.org/download/download/" target="_blank">Télécharger</a>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/lT_RkuT1T38" allowfullscreen></iframe>
+            </div>
+        </article>
+    </section>
 
     <footer>
         <p>&copy; 2025 IDA - Tous droits réservés</p>
     </footer>
+
+    <script>
+        // Fonction pour rechercher sur YouTube
+        function searchYouTube() {
+            let query = document.getElementById("youtubeQuery").value;
+            if (query) {
+                let url = "https://www.youtube.com/results?search_query=" + encodeURIComponent(query);
+                window.open(url, "_blank");
+            } else {
+                alert("Veuillez entrer un nom de logiciel !");
+            }
+        }
+    </script>
 </body>
 </html>
