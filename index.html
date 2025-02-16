@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IDA- informatique developpeur d'application</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 
@@ -13,19 +14,22 @@
           <div class="header">
       <img src="./logo.jpg">
         
-        <h3>
+        <h6>
             <nav>
-            <ul>
+            
+                <ul>
                 <li><a href="cours.html">Cours</a></li>
                 <li><a href="tutoriels.html">Tutoriels</a></li>
                 <li><a href="logiciels.html">Logiciels</a></li>
-<li><a href="qr.html">Générateur de QR code </a></li><li><a href="IA.html">IA</a></li>
-                
+                <li><a href="actualites.html">Actualités</a></li>
+                <li><a href="qr.html">Générateur de QR</a></li><li><a href="bibliotheque.html">Bibliothèque</a></li>
+                <li><a href="IA.html">IA</a></li>
+                <li><a href="projets.html">Projets</a></li>
             </ul>
                 
-            
+           
         </nav>
-        </h3>
+        </h>
         <!-- Bouton Retour en Haut -->
 <button id="btnTop" class="btn-top">↑</button>
 <!-- Bouton Mode Sombre -->
@@ -50,7 +54,7 @@
         <h1>Bienvenue sur IDA Hub</h1>
         <p>Découvrez les dernières publications, tutoriels et ressources pour le développement informatique.</p>
         <a href="#" class="btn">Explorer</a>
-        <a href="https://www.facebook.com/profile.php?id=61572616138699" class="btn">facebook</a>
+        <a href="https://www.facebook.com/profile.php?id=61572616138699" class="btn">notre page facebook</a>
     </section>
     <section class="fade-in">
     <h2>Cours et Tutoriels</h2>
@@ -122,6 +126,17 @@
 
     <button type="submit">Envoyer</button>
 </form>
+    </section>
+    <h2> Votre assistant pour aide a vite trouver</h2>
+    <section>
+        <div id="chat-container">
+    <div id="chat-box">
+        <div id="messages"></div>
+        <input type="text" id="user-input" placeholder="Posez-moi une question..." onkeypress="handleKeyPress(event)">
+        <button onclick="sendMessage()">Envoyer</button>
+    </div>
+</div>
+        
     </section>
 
     <!-- Pied de page -->
