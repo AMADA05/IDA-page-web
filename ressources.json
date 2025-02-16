@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Guide complet HTML & CSS",
+        "description": "Un eBook détaillé pour apprendre le développement web.",
+        "category": "pdf",
+        "link": "ressources/html-css-guide.pdf"
+    },
+    {
+        "title": "Cours JavaScript pour débutants",
+        "description": "Vidéo tutorielle complète sur JavaScript.",
+        "category": "video",
+        "link": "https://www.youtube.com/watch?v=XYZ123"
+    },
+    {
+        "title": "Éditeur de code VS Code",
+        "description": "Téléchargez Visual Studio Code pour programmer facilement.",
+        "category": "software",
+        "link": "https://code.visualstudio.com/download"
+    },
+    {
+        "title": "Algorithmique et structures de données",
+        "description": "Un document PDF sur l’algorithmique et les structures de données.",
+        "category": "pdf",
+        "link": "ressources/algorithmes.pdf"
+    }
+]
