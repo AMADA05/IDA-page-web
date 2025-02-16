@@ -454,3 +454,68 @@ button:hover {
     max-width: 900px; /* Taille maximale pour éviter qu'elle soit trop grande */
     border-radius: 10px; /* Coins arrondis pour un meilleur design */
 }
+
+#chat-container {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+#messages {
+    height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+}
+
+.bot-message, .user-message {
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 10px;
+    width: fit-content;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.bot-message {
+    background: #e1f5fe;
+    float: left;
+    clear: both;
+}
+
+.user-message {
+    background: #4CAF50;
+    color: white;
+    float: right;
+    clear: both;
+}
+
+#input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#user-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#send-button {
+    padding: 10px;
+    margin-left: 5px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#send-button:hover {
+    background: #45a049;
+}
