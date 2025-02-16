@@ -2,61 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>IDA.IA </title>
-    <style>
-
-        #messages {
-    max-width: 90%;
-    height: 400px;
-    overflow-y: auto;
-    padding: 10px;
-}
-
-.bot-message, .user-message {
-    padding: 8px 12px;
-    margin: 5px 0;
-    border-radius: 10px;
-    width: fit-content;
-    max-width: 70%;
-}
-
-.bot-message {
-    background: #e1f5fe;
-    color: #000;
-    text-align: left;
-    float: left;
-    clear: both;
-}
-
-.user-message {
-    background: #4CAF50;
-    color: white;
-    text-align: right;
-    float: right;
-    clear: both;
-}
-    </style>
+    <title>Chatbot IA</title>
 </head>
 <body>
-    <header>
-        <h1> IA </h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="cours.html">Cours</a></li>
-                <li><a href="tutoriels.html">Tutoriels</a></li>
-            </ul>
-        </nav>
-    </header>
-    
     <div id="chat-container">
-    <div id="chat-box">
         <div id="messages"></div>
-        <input type="text" id="user-input" placeholder="Posez-moi une question..." onkeypress="handleKeyPress(event)">
-        <button onclick="sendMessage()">Envoyer</button>
+        <div id="input-container">
+            <input type="text" id="user-input" placeholder="Posez votre question..." />
+            <div>
+                <button id="send-button" onclick="sendMessage()">Envoyer</button>
+                
+            </div>
+        </div>
     </div>
-</div>
-<script src="script1.js"></script>
+
+    <!-- Inclusion du script JavaScript -->
+    <script src="script1.js"></script>
 </body>
 </html>
