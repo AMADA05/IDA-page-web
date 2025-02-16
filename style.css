@@ -454,7 +454,6 @@ button:hover {
     max-width: 900px; /* Taille maximale pour éviter qu'elle soit trop grande */
     border-radius: 10px; /* Coins arrondis pour un meilleur design */
 }
-
 #chat-container {
     width: 90%;
     max-width: 600px;
@@ -518,4 +517,222 @@ button:hover {
 
 #send-button:hover {
     background: #45a049;
+}
+/* Style pour la page des projets */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #007bff;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+}
+
+#project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.project-card {
+    background: white;
+    width: 300px;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+}
+
+.project-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.project-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.project-card a:hover {
+    background: #0056b3;
+}
+/* Style pour la page des actualités */
+#news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.news-card {
+    background: white;
+    width: 300px;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.news-card:hover {
+    transform: scale(1.05);
+}
+
+.news-card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+}
+
+.news-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.news-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.news-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.news-card a:hover {
+    background: #218838;
+}
+/* Style pour la bibliothèque */
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+nav button:hover {
+    background: #0056b3;
+}
+
+#resource-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.resource-card {
+    background: white;
+    width: 300px;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.resource-card:hover {
+    transform: scale(1.05);
+}
+
+.resource-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.resource-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.resource-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.resource-card a:hover {
+    background: #218838;
+}
+#projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.project-item img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+pre {
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
