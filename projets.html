@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets & Réalisations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Mes Projets & Réalisations</h1>
+        
+    </header>
+
+    <main id="project-container">
+        <!-- Projets ajoutés dynamiquement ici -->
+    </main>
+    <h1>📌 Espace de Partage de Projets</h1>
+    
+
+    <main>
+        <section id="add-project">
+            <h2>Ajouter un projet</h2>
+            <input type="text" id="project-title" placeholder="Nom du projet">
+            <textarea id="project-description" placeholder="Description du projet"></textarea>
+            <input type="text" id="project-link" placeholder="Lien GitHub (optionnel)">
+            <input type="file" id="project-image" accept="image/*">
+<textarea id="project-code" placeholder="Ajoutez du code (si c'est un projet informatique)"></textarea>
+            <button onclick="addProject()">Publier</button>
+        </section>
+
+        <section id="project-list">
+            <h2>📂 Projets publiés</h2>
+            <div id="projects-container"></div>
+        </section>
+    </main>
+
+    <script src="projets.js"></script>
+
+</body>
+</html>
+        
