@@ -3,27 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bibliothèque de Ressources</title>
+    <title>Actualités Technologique</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Bibliothèque de Ressources</h1>
+        <h1>Actualités & Tendances Tech</h1>
     </header>
 
-    <nav>
-        <button onclick="filterResources('all')">Tout</button>
-        <button onclick="filterResources('pdf')">PDF</button>
-        <button onclick="filterResources('video')">Vidéos</button>
-        <button onclick="filterResources('software')">Logiciels</button>
-    </nav>
-
-    <main id="resource-container">
-        <!-- Les ressources seront ajoutées ici dynamiquement -->
+    <main id="news-container">
+        <!-- Les articles seront ajoutés ici dynamiquement -->
     </main>
 
-    <script src="bibliotheque.js"></script>
+    <script src="actualites.js"></script>
 
 </body>
 </html>
